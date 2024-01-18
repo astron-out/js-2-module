@@ -57,16 +57,40 @@
 
 // console.log(yearsUntilRetirment(2007, "Khudoyberdi", "Shamsiyev"));\
 
-const cutPieces = function (fruit) {
-  return fruit * 4;
+// const cutPieces = function (fruit) {
+//   return fruit * 4;
+// };
+
+// const fruitProcessor = function (apples, oranges) {
+//   const applePieces = cutPieces(apples);
+//   const orangePieces = cutPieces(oranges);
+
+//   const juice = `Juice with ${applePieces} pieces of apple and with ${orangePieces} pieces of orange`;
+//   return juice;
+// };
+
+// console.log(fruitProcessor(2, 3));
+
+// First  coding challenge for with module
+
+const calcAverage = function (firstScore, secondScore, thirdScore) {
+  const avrScore = (firstScore + secondScore + thirdScore) / 3;
+  return avrScore;
 };
 
-const fruitProcessor = function (apples, oranges) {
-  const applePieces = cutPieces(apples);
-  const orangePieces = cutPieces(oranges);
+const avrDolphineScore = calcAverage(23, 34, 27);
+const avrKoalasScore = calcAverage(85, 54, 41);
 
-  const juice = `Juice with ${applePieces} pieces of apple and with ${orangePieces} pieces of orange`;
-  return juice;
+const checkWinner = function (avrDolphine, avrKoalas) {
+  if (avrDolphine >= avrKoalas * 2) {
+    console.log(`Dolphine wins (${avrDolphine} vs ${avrKoalas})`);
+  } else if (avrKoalas >= avrDolphine * 2) {
+    console.log(`Koalas wins (${avrKoalas} vs ${avrDolphine})`);
+  } else if (avrDolphine === avrKoalas) {
+    console.log(`There is can't be draw (${avrDolphine} vs ${avrKoalas})`);
+  } else {
+    console.log("There is no winners!");
+  }
 };
 
-console.log(fruitProcessor(2, 3));
+checkWinner(avrDolphineScore, avrKoalasScore);
