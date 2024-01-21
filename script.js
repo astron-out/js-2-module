@@ -73,24 +73,82 @@
 
 // First  coding challenge for with module
 
-const calcAverage = function (firstScore, secondScore, thirdScore) {
-  const avrScore = (firstScore + secondScore + thirdScore) / 3;
-  return avrScore;
-};
+// const calcAverage = function (firstScore, secondScore, thirdScore) {
+//   const avrScore = (firstScore + secondScore + thirdScore) / 3;
+//   return avrScore;
+// };
 
-const avrDolphineScore = calcAverage(23, 34, 27);
-const avrKoalasScore = calcAverage(85, 54, 41);
+// const avrDolphineScore = calcAverage(23, 34, 27);
+// const avrKoalasScore = calcAverage(85, 54, 41);
 
-const checkWinner = function (avrDolphine, avrKoalas) {
-  if (avrDolphine >= avrKoalas * 2) {
-    console.log(`Dolphine wins (${avrDolphine} vs ${avrKoalas})`);
-  } else if (avrKoalas >= avrDolphine * 2) {
-    console.log(`Koalas wins (${avrKoalas} vs ${avrDolphine})`);
-  } else if (avrDolphine === avrKoalas) {
-    console.log(`There is can't be draw (${avrDolphine} vs ${avrKoalas})`);
+// const checkWinner = function (avrDolphine, avrKoalas) {
+//   if (avrDolphine >= avrKoalas * 2) {
+//     console.log(`Dolphine wins (${avrDolphine} vs ${avrKoalas})`);
+//   } else if (avrKoalas >= avrDolphine * 2) {
+//     console.log(`Koalas wins (${avrKoalas} vs ${avrDolphine})`);
+//   } else if (avrDolphine === avrKoalas) {
+//     console.log(`There is can't be draw (${avrDolphine} vs ${avrKoalas})`);
+//   } else {
+//     console.log("There is no winners!");
+//   }
+// };
+
+// checkWinner(avrDolphineScore, avrKoalasScore);
+
+// This is the tipical variables
+
+const friend1 = "Michael";
+const friend2 = "John";
+const friend3 = "Peter";
+
+// Arrays
+
+const friends = ["Michael", "John", "Peter"];
+console.log(friends);
+
+// const years = new Array(1991, 2008, 2007, 1984);
+
+// console.log(`My friend is ${friends[1]} he was born in ${years[1]}`);
+
+// const firstName = "Khudoyberdi";
+
+// const khudoyberdi = [
+//   firstName,
+//   "Shamsiyev",
+//   2024 - 2007,
+//   "student of high-school",
+//   friends,
+// ];
+// console.log(
+//   `I'm ${khudoyberdi[0]} ${khudoyberdi[1]} and I'm ${khudoyberdi[2]} years old, I'm not working, I'm just ${khudoyberdi[3]}, and my friends is ${khudoyberdi[4]}`
+// );
+
+// // Exercise
+
+// const calcAge = function (birthYear) {
+//   return 2024 - birthYear;
+// };
+
+// const years = [1991, 1962, 1984, 2001, 2010, 2018];
+
+// console.log(calcAge(years[4]));
+
+// New coding challenge
+
+// const total = bill + tip;
+
+const calcTip = function (bill) {
+  if (bill <= 50 || bill <= 300) {
+    return (bill / 100) * 15;
+    // console.log(`Bill: ${bill}, tip: ${15}`);
   } else {
-    console.log("There is no winners!");
+    return (bill / 100) * 20;
+    // console.log(`Bill: ${bill}, tip: ${20}`);
   }
 };
 
-checkWinner(avrDolphineScore, avrKoalasScore);
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log(`Bill: ${bills}, tips: ${tips}, total: ${totals}`);
