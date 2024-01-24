@@ -97,14 +97,14 @@
 
 // This is the tipical variables
 
-const friend1 = "Michael";
-const friend2 = "John";
-const friend3 = "Peter";
+// const friend1 = "Michael";
+// const friend2 = "John";
+// const friend3 = "Peter";
 
-// Arrays
+// // Arrays
 
-const friends = ["Michael", "John", "Peter"];
-console.log(friends);
+// const friends = ["Michael", "John", "Peter"];
+// console.log(friends);
 
 // const years = new Array(1991, 2008, 2007, 1984);
 
@@ -137,18 +137,84 @@ console.log(friends);
 
 // const total = bill + tip;
 
-const calcTip = function (bill) {
-  if (bill <= 50 || bill <= 300) {
-    return (bill / 100) * 15;
-    // console.log(`Bill: ${bill}, tip: ${15}`);
-  } else {
-    return (bill / 100) * 20;
-    // console.log(`Bill: ${bill}, tip: ${20}`);
-  }
+// const calcTip = function (bill) {
+//   if (bill <= 50 || bill <= 300) {
+//     return (bill / 100) * 15;
+//     // console.log(`Bill: ${bill}, tip: ${15}`);
+//   } else {
+//     return (bill / 100) * 20;
+//     // console.log(`Bill: ${bill}, tip: ${20}`);
+//   }
+// };
+
+// const bills = [125, 555, 44];
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+// console.log(`Bill: ${bills}, tips: ${tips}, total: ${totals}`);
+
+// Object propeties
+
+// const kh = {
+//   firstName: "Khudoyberdi",
+//   lastName: "Shamsiyev",
+//   age: 2024 - 2007,
+//   job: "Student",
+//   friends: ["Michael", "John", "Thomas"],
+// };
+
+// console.log(kh);
+// console.log(kh.lastName);
+
+// const interestedIn = prompt(
+//   "What you want to know about Khudoyberdi? Choose between firstName, lastName, age, job, friends"
+// );
+
+// if (kh[interestedIn]) {
+//   console.log(kh[interestedIn]);
+// } else {
+//   console.log("There is no data about it");
+// }
+
+// kh.location = "Uzbekistan";
+// kh["instagram"] = "@kh.shmsv__";
+
+// console.log(kh);
+
+// console.log(
+//   `${kh["firstName"]} has ${kh.friends.length} friends and his best friend called ${kh.friends[0]}`
+// );
+
+const kh = {
+  firstName: "Khudoyberdi",
+  lastName: "Shamsiyev",
+  birthYear: 2007,
+  job: "student",
+  friends: ["Michael", "John", "Thomas"],
+  driversLicense: false,
+
+  // calcAge: function (birthYear) {
+  //   return 2024 - birthYear;
+  // }
+
+  // calcAge: function () {
+  //   return 2024 - this.birthYear;
+  // },
+
+  calcAge: function () {
+    this.age = 2024 - this.birthYear;
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${this.firstName} is ${this.age}-tears old ${
+      this.job
+    }, and he has ${this.driversLicense ? "a" : "no"} driver's license.`;
+  },
 };
 
-const bills = [125, 555, 44];
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
-const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+console.log(kh.calcAge());
+console.log(kh.age);
+// console.log(kh["calcAge"](2007));
 
-console.log(`Bill: ${bills}, tips: ${tips}, total: ${totals}`);
+console.log(kh.getSummary());
