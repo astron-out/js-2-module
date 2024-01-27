@@ -221,40 +221,88 @@
 
 // Coding challenge #3
 
-const mark = {
-  firstName: "Mark",
-  lastName: "Miller",
-  mass: 78,
-  height: 1.69,
+// const mark = {
+//   firstName: "Mark",
+//   lastName: "Miller",
+//   mass: 78,
+//   height: 1.69,
 
-  calcBmi: function () {
-    this.bmi = this.mass / this.height ** 2;
-    return this.bmi;
-  },
-};
+//   calcBmi: function () {
+//     this.bmi = this.mass / this.height ** 2;
+//     return this.bmi;
+//   },
+// };
 
-const john = {
-  firstName: "John",
-  lastName: "Smith",
-  mass: 92,
-  height: 1.95,
+// const john = {
+//   firstName: "John",
+//   lastName: "Smith",
+//   mass: 92,
+//   height: 1.95,
 
-  calcBmi: function () {
-    this.bmi = this.mass / this.height ** 2;
-    return this.bmi;
-  },
-};
+//   calcBmi: function () {
+//     this.bmi = this.mass / this.height ** 2;
+//     return this.bmi;
+//   },
+// };
 
-if (mark.calcBmi() > john.calcBmi()) {
-  console.log(
-    `${mark.firstName}'s BMI (${mark.calcBmi()}) is higher than ${
-      john.firstName
-    }'s (${john.calcBmi()})`
-  );
-} else {
-  console.log(
-    `${john.firstName}'s BMI (${john.calcBmi()}) is higher than ${
-      mark.firstName
-    }'s (${mark.calcBmi()})`
-  );
+// if (mark.calcBmi() > john.calcBmi()) {
+//   console.log(
+//     `${mark.firstName}'s BMI (${mark.calcBmi()}) is higher than ${
+//       john.firstName
+//     }'s (${john.calcBmi()})`
+//   );
+// } else {
+//   console.log(
+//     `${john.firstName}'s BMI (${john.calcBmi()}) is higher than ${
+//       mark.firstName
+//     }'s (${mark.calcBmi()})`
+//   );
+// }
+
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights repitition ${rep} 🏋️‍♂️`);
+// }
+
+// for (let rep = 1; rep <= 100; rep++) {
+//   console.log(`${rep}. Just some text here!`);
+// }
+
+const khArray = [
+  "Khudoyberdi",
+  "Shamsiyev",
+  2024 - 2007,
+  "student",
+  ["Michael", "John", "Thomas"],
+];
+
+for (let i = 0; i < khArray.length; i++) {
+  console.log(khArray[i]);
+}
+
+const years = [1991, 2000, 2005, 2007];
+const ages = [];
+const type = [];
+
+for (let i = 0; i < years.length; i++) {
+  let calcAge = 2024 - years[i];
+  ages.push(calcAge);
+  type.push(typeof years[i]);
+}
+
+console.log(ages);
+console.log(type);
+
+console.log("---STRINGS ONLY---");
+for (let i = 0; i < khArray.length; i++) {
+  if (typeof khArray[i] !== "string") continue;
+
+  console.log(khArray[i]);
+}
+
+console.log("---WITH NUMBERS---");
+
+for (let i = 0; i < khArray.length; i++) {
+  if (typeof khArray[i] === "number") break;
+
+  console.log(khArray[i]);
 }
